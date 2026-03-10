@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 5158633}
   - component: {fileID: 5158632}
   m_Layer: 0
-  m_Name: StartAttitudeSensorButton
+  m_Name: StartMotionSensorButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1826891583}
         m_TargetAssemblyTypeName: AR_SetUpUI_Manager, Assembly-CSharp
-        m_MethodName: StartAttitudeSensorButton
+        m_MethodName: StartMotionSensorsButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1628,7 +1628,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1262572918
@@ -1886,7 +1886,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerCam: {fileID: 892121625}
-  _currentPhase: 0
+  _showWebCamPhase: 0
+  _webCamTexture: {fileID: 0}
 --- !u!23 &1811954418
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2012,10 +2013,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u59FF\u52E2\u30BB\u30F3\u30B5\u30FC\n\u3092\u8A31\u53EF\u3059\u308B"
+  m_text: "\u30E2\u30FC\u30B7\u30E7\u30F3\u30BB\u30F3\u30B5\u30FC\n\u3092\u8A31\u53EF\u3059\u308B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fee264b3365b1c244af1e2ddd128ba6c, type: 2}
-  m_sharedMaterial: {fileID: -3140873248172562328, guid: 110e4bd1867c7b9479a9bfe729381bc0, type: 2}
+  m_sharedMaterial: {fileID: -3140873248172562328, guid: fee264b3365b1c244af1e2ddd128ba6c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2039,8 +2040,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2080,7 +2081,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1817469706
@@ -2467,6 +2468,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3988959371692900575, guid: ad0efee8c05c1d941b47fddb365a972d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7241598425053579896, guid: ad0efee8c05c1d941b47fddb365a972d, type: 3}
+      propertyPath: IsRunningInEditor
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8634011604948194596, guid: ad0efee8c05c1d941b47fddb365a972d, type: 3}
